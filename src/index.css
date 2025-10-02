@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 210 12% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 12% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 12% 16%;
+
+    --primary: 210 100% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 60%;
+
+    --secondary: 210 100% 95%;
+    --secondary-foreground: 210 100% 40%;
+
+    --success: 134 61% 41%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 134 61% 60%;
+
+    --gold: 51 100% 50%;
+    --gold-foreground: 210 12% 16%;
+    --gold-glow: 51 100% 70%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 210 12% 45%;
+
+    --accent: 210 100% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 100% 40%;
+
+    --radius: 1rem;
+
+    /* Game-specific colors */
+    --game-bg: 220 20% 97%;
+    --quest-card: 0 0% 100%;
+    --achievement-locked: 210 12% 85%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 40%), hsl(210 100% 60%));
+    --gradient-success: linear-gradient(135deg, hsl(134 61% 41%), hsl(134 61% 60%));
+    --gradient-gold: linear-gradient(135deg, hsl(51 100% 50%), hsl(51 100% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 40%) 0%, hsl(210 100% 60%) 50%, hsl(51 100% 50%) 100%);
+    
+    /* Shadows */
+    --shadow-card: 0 2px 8px hsl(210 100% 40% / 0.08);
+    --shadow-card-hover: 0 8px 24px hsl(210 100% 40% / 0.15);
+    --shadow-achievement: 0 4px 12px hsl(51 100% 50% / 0.25);
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 15%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 15%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 70%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --success: 134 61% 50%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 134 61% 65%;
+
+    --gold: 51 100% 60%;
+    --gold-foreground: 222 47% 11%;
+    --gold-glow: 51 100% 75%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 210 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 210 100% 60%;
+
+    --game-bg: 222 47% 11%;
+    --quest-card: 222 47% 15%;
+    --achievement-locked: 217 33% 25%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 50%), hsl(210 100% 70%));
+    --gradient-success: linear-gradient(135deg, hsl(134 61% 45%), hsl(134 61% 65%));
+    --gradient-gold: linear-gradient(135deg, hsl(51 100% 55%), hsl(51 100% 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(210 100% 70%) 50%, hsl(51 100% 60%) 100%);
+    
+    --shadow-card: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-card-hover: 0 8px 24px hsl(0 0% 0% / 0.5);
+    --shadow-achievement: 0 4px 12px hsl(51 100% 50% / 0.35);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-game-bg text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+  
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  
+  .shadow-achievement {
+    box-shadow: var(--shadow-achievement);
+  }
+}

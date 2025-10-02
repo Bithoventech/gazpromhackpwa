@@ -1,0 +1,28 @@
+project_id = "orusvsmyhyiwaxhwlach"
+
+[functions.daily-scammer-chat]
+verify_jwt = false
+
+[functions.process-audio]
+verify_jwt = false
+
+[functions.rotate-daily-quest]
+verify_jwt = false
+
+[functions.generate-scammer-avatar]
+verify_jwt = false
+
+[functions.daily-scammer-chat]
+verify_jwt = false
+
+[functions.process-audio]
+verify_jwt = false
+
+[functions.process-image]
+verify_jwt = false
+
+[functions.rotate-daily-quest]
+verify_jwt = false
+
+[functions.generate-scammer-avatar]
+verify_jwt = false
